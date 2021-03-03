@@ -9,8 +9,50 @@ body{
   margin: 0;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.panel{
+  background-size: cover 100%;
+  height: 80vh;
+  background-repeat: no-repeat;
+  border-radius: 50px;
+  color:#fff;
+  flex:0.5;
+  margin:10px;
+  position: relative;
+  transition: flex .7s ease-in;
+  cursor: pointer;
+}
+
+.panel h3{
+  position: absolute;
+  bottom: 20px;
+  left:20px;
+  opacity: 0;
+  transition: opacity .3s ease .4s;
+}
+
+.panel.active{
+  flex: 5;
+}
+
+.panel.active h3{
+  opacity: 1;
+}
+
+@media (max-width: 480px){
+  .container{
+    width: 100vw;
+  }
+  .panel:nth-child(4), .panel:nth-child(5){
+    display: none;
+  }
 }
