@@ -6,7 +6,7 @@ checkboxes();
 
 function checkboxes(){
     
-    const trigger = window.innerHeight - 100;
+    const trigger = window.innerHeight - 2  00;
    
     boxes.forEach(box => {
         const boxTop = box.getBoundingClientRect().top;
